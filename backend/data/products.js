@@ -1,7 +1,7 @@
 const products = [
     {
       name: 'Rivet Loopback Sweatshirt',
-      image: '/images/shirt-1.jpg',
+      image: '/images/product-18.png',
       description:
         'Next level yr, 90’s small batch four loko brunch wes anderson fixie american apparel flexitarian pitchfork neutra. Constructed in cotton sweat fabric, this lovely piece, lacus eu mattis auctor, dolor lectus venenatis nulla, at tristique eros sem vel ante',
       brand: 'Mr. Tailor',
@@ -13,7 +13,7 @@ const products = [
     },
     {
       name: 'Dégradé Slub Sweater',
-      image: '/images/leather-boots-2.jpg',
+      image: '/images/product-5.png',
       description:
         'Next level yr, 90’s small batch four loko brunch wes anderson fixie american apparel flexitarian pitchfork neutra. Constructed in cotton sweat fabric, this lovely piece, lacus eu mattis auctor, dolor lectus venenatis nulla, at tristique eros sem vel ante.',
       brand: 'Mr. Tailor',
@@ -24,8 +24,8 @@ const products = [
       numReviews: 8,
     },
     {
-      name: 'Mayfair Watch',
-      image: '/images/watch-4.jpg',
+      name: 'Horizon Watches',
+      image: '/images/watch-1.png',
       description:
         'Black Mayfair watch from Bamford Watch Department featuring a rotating bezel, a 40mm stainless steel case, a quartz movement, a rubber strap, luminova indices and a neon orange dial with black accents. This item comes with a gift box',
       brand: 'Mr. Tailor',
@@ -36,8 +36,8 @@ const products = [
       numReviews: 12,
     },
     {
-      name: 'Grouped Product Demo',
-      image: '/images/creames-5.jpg',
+      name: 'Rose Gold Diamond Ring',
+      image: '/images/jewellery-1.jpg',
       description:
         'A Grouped product is a collection of related products which can be purchased individually and can only consist of simple products. For example, a simple product for a PS3 could be a grouped product as there are 80GB, 120GB and 200GB variations of that same parent product.',
       brand: 'Mr. Tailor',
@@ -61,7 +61,7 @@ const products = [
     },
     {
       name: 'Canvas High-Top Sneakers',
-      image: '/images/canvas-sneakers-9.jpg',
+      image: '/images/product-15.png',
       description:
         'Already thinking about your new adventure? Make sure you have everything you need: the tent, water bottle, the portable light and these Bedford camouflage sneakers from Saint Laurent.',
       brand: 'Mr. Tailor',

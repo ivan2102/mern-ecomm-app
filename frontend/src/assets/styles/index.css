@@ -1,3 +1,8 @@
+
+body {
+  background-color: rgb(102, 102, 102);
+}
+
 main {
     min-height: 80vh;
   }
