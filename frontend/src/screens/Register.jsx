@@ -9,7 +9,7 @@ import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
 
 
-const Login = () => {
+const Register = () => {
   
   const [ name, setName ] = useState('')
   const [ email, setEmail ] = useState('')
@@ -20,7 +20,7 @@ const Login = () => {
   const navigate = useNavigate()
 
   const [register, {isLoading}] = useRegisterMutation()
-  const user = useSelector((state) => state.auth)
+  const { user } = useSelector((state) => state.auth)
 
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
@@ -90,7 +90,7 @@ const Login = () => {
         <FormGroup controlId="password" className="my-3">
         <FormLabel>Password</FormLabel>
         <FormControl
-        type="'password"
+        type="password"
         placeholder="Please enter your password"
         value={ password }
         onChange={(event) => setPassword(event.target.value)}
@@ -109,7 +109,7 @@ const Login = () => {
         </FormControl>
         </FormGroup>
 
-        <Button type="submit" variant="secondary" disabled={ isLoading } className="mt-2">
+        <Button type="submit" variant="secondary" disabled={ isLoading } className="mt-2 text-white">
         Register
         </Button>
 
@@ -124,4 +124,4 @@ const Login = () => {
     </FormContainer>
   )
 }
-export default Login
+export default Register

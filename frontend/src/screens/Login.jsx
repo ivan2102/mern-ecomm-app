@@ -67,7 +67,7 @@ const Login = () => {
         <FormGroup controlId="password" className="my-3">
         <FormLabel>Password</FormLabel>
         <FormControl
-        type="'password"
+        type="password"
         placeholder="Enter your password"
         value={ password }
         onChange={(event) => setPassword(event.target.value)}
@@ -76,7 +76,7 @@ const Login = () => {
         </FormControl>
         </FormGroup>
 
-        <Button type="submit" variant="secondary" disabled={ isLoading } className="mt-2">
+        <Button type="submit" variant="secondary" disabled={ isLoading } className="mt-2 text-white">
         Login
         </Button>
 
