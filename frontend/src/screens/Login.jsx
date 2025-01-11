@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { Form, Button, Row, Col, FormGroup, FormLabel, FormControl } from 'react-bootstrap';
 import FormContainer from "../components/FormContainer";
 import Loader from '../components/Loader';
-import { useLoginMutation } from "../slices/usersSlice";
+import { useLoginMutation } from "../slices/usersApiSlice";
 import { setCredentials } from '../slices/authSlice';
 import { toast } from 'react-toastify';
-
+import { redirect } from "react-router-dom"
 
 const Login = () => {
 
@@ -18,7 +18,7 @@ const Login = () => {
   const navigate = useNavigate()
 
   const [login, {isLoading}] = useLoginMutation()
-  const user = useSelector((state) => state.auth)
+  const { user } = useSelector((state) => state.auth)
 
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
@@ -32,7 +32,7 @@ const Login = () => {
 
         navigate(redirect)
       }
-    }, [navigate, redirect, user])
+    }, [navigate, redirect,  user])
 
     const submitHandler = async (event) => {
         event.preventDefault()

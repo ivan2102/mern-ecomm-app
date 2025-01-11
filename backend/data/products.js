@@ -24,8 +24,8 @@ const products = [
       numReviews: 8,
     },
     {
-      name: 'Horizon Watches',
-      image: '/images/watch-1.png',
+      name: 'Guess Watches',
+      image: '/images/watch-3.jpg',
       description:
         'Black Mayfair watch from Bamford Watch Department featuring a rotating bezel, a 40mm stainless steel case, a quartz movement, a rubber strap, luminova indices and a neon orange dial with black accents. This item comes with a gift box',
       brand: 'Mr. Tailor',
@@ -48,8 +48,8 @@ const products = [
       numReviews: 12,
     },
     {
-      name: 'Dark Low Top Sneakers',
-      image: '/images/dark-sneakers-8.jpg',
+      name: 'Jordan Top Sneakers',
+      image: '/images/jordan.jpg',
       description:
         'Multi-coloured low-top sneakers from Diesel featuring a round toe, mesh panels, a lace-up front fastening, a logo patch at the tongue, a paint splatter effect and a pull tab at the rear.',
       brand: 'Mr. Tailor',

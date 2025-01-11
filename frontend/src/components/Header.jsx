@@ -2,10 +2,11 @@ import { Navbar, Nav, Container, Badge, NavbarToggle, NavbarCollapse, NavLink, N
 import { LinkContainer } from 'react-router-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { useLogoutMutation } from '../slices/usersSlice';
+import { useLogoutMutation } from '../slices/usersApiSlice';
 import { logout } from '../slices/authSlice';
 import  { FaShoppingCart, FaUser } from 'react-icons/fa';
 import logo from '../assets/logo.png';
+import SearchBox from './SearchBox';
 
 const Header = () => {
 
@@ -49,6 +50,8 @@ const Header = () => {
         <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='ms-auto'>
 
+        <SearchBox />
+        
        <LinkContainer to='/cart'>
        <NavLink>
        <FaShoppingCart />
@@ -83,7 +86,22 @@ const Header = () => {
       </LinkContainer>
     )}
 
-      
+    {user && user.isAdmin && (
+
+      <NavDropdown title='Admin' id='admin'>
+        <LinkContainer to='/admin/userlist'>
+        <NavDropdown.Item>Admin Users</NavDropdown.Item>
+        </LinkContainer>
+
+        <LinkContainer to='/admin/productlist'>
+        <NavDropdown.Item>Admin Products</NavDropdown.Item>
+        </LinkContainer>
+
+        <LinkContainer to='/admin/orderlist'>
+        <NavDropdown.Item>Admin Orders</NavDropdown.Item>
+        </LinkContainer>
+      </NavDropdown>
+    )}  
        
         </Nav>
         </Navbar.Collapse>
