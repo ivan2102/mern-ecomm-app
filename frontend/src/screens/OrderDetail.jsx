@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Row, Col, ListGroup, ListGroupItem, Image, Form, Button, Card } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { toast } from "react-toastify";
@@ -105,7 +105,7 @@ const OrderDetail = () => {
 
             try {
 
-                await orderPay({orderId, details})
+                await orderPay({orderId, details}).unwrap()
                 refetch()
                 toast.success('Payment successful')
                 
@@ -131,7 +131,7 @@ const OrderDetail = () => {
 
 ) : error ? (
 
-<Message variant='danger' />
+<Message variant='danger'>{error?.data?.message || error.error}</Message>
 
 ) : (
 
@@ -198,7 +198,7 @@ const OrderDetail = () => {
         </Col>
 
         <Col>
-        <Link to={`/product/{item.product}`}>
+        <Link to={`/product/${item.product}`}>
         {item.name}
         </Link>
         </Col>

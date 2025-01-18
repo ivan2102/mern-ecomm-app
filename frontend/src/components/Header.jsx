@@ -7,6 +7,7 @@ import { logout } from '../slices/authSlice';
 import  { FaShoppingCart, FaUser } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 import SearchBox from './SearchBox';
+import { resetCart } from '../slices/cartSlice';
 
 const Header = () => {
 
@@ -24,6 +25,7 @@ const Header = () => {
 
       await logoutSlice().unwrap()
       dispatch(logout())
+      dispatch(resetCart())
       navigate('/login')
       
     } catch (error) {

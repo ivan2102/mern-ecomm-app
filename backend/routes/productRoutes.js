@@ -9,11 +9,12 @@ import { getProducts,
       getTopRatedProducts
  } from '../controllers/productController.js';
 import { protect, adminMiddleware } from '../middleware/authMiddleware.js';
+import checkObjectId from '../middleware/checkObjectId.js';
 
 router.route('/').get(getProducts)
 router.route('/top').get(getTopRatedProducts)
-router.route('/:id').get(getSingleProduct).put(protect, adminMiddleware, updateAdminProduct).delete(protect, adminMiddleware, deleteProduct)
+router.route('/:id').get(checkObjectId, getSingleProduct).put(protect, adminMiddleware, checkObjectId, updateAdminProduct).delete(protect, adminMiddleware, checkObjectId, deleteProduct)
 router.route('/').post(protect, adminMiddleware, createAdminProduct)
-router.route('/:id/reviews').post(protect, productReviews)
+router.route('/:id/reviews').post(protect, checkObjectId, productReviews)
 
 export default router;
